@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="col-md-6 offset-md-3">
+
+    <h1>Update Profile</h1>
+    <br />
+
+    <form method="POST" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ user_form.as_p }}
+        {{ profile_form.as_p}}
+        <button class="btn btn-secondary">Register</button>
+    </form>
+
+</div>
+
+
+<script>
+    window.onunload = function(){};
+    if (window.performance && window.performance.navigation.type === window.performance.navigation.TYPE_BACK_FORWARD) {
+        location.reload();
+    }
+</script>
+
+{% endblock %}
